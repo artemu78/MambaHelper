@@ -1,0 +1,47 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: MambaHelper Serverless Backend
+
+Globals:
+  Function:
+    Timeout: 30
+    MemorySize: 512
+    Runtime: python3.12
+    Architectures:
+      - arm64
+    Environment:
+      Variables:
+        PERSONA_TABLE: !Ref PersonaTable
+        OPENROUTER_KEY_PARAM: "MambaHelperOpenRouterKey"
+
+Resources:
+  MambaHelperFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: MambaHelperDaterEngine
+      CodeUri: ./
+      Handler: src.handlers.handler
+      Events:
+        ProxyApi:
+          Type: Api
+          Properties:
+            Path: /{proxy+}
+            Method: ANY
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: !Ref PersonaTable
+        - SSMParameterReadPolicy:
+            ParameterName: "MambaHelperOpenRouterKey"
+
+  PersonaTable:
+    Type: AWS::Serverless::SimpleTable
+    Properties:
+      PrimaryKey:
+        Name: userId
+        Type: String
+      TableName: MambaHelperPersonas
+
+Outputs:
+  ApiUrl:
+    Description: "API Gateway endpoint URL"
+    Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/"

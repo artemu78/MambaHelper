@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "skills": {
+    "aws-serverless": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "skillPath": "skills/core-skills/aws-serverless/SKILL.md",
+      "computedHash": "71def884b7e0277e2ba0d9a0ac47d5a55a3904d62f0bfdbbc03cec5cef1e5b55"
+    },
+    "aws-serverless-deployment": {
+      "source": "awslabs/agent-plugins",
+      "sourceType": "github",
+      "skillPath": "plugins/aws-serverless/skills/aws-serverless-deployment/SKILL.md",
+      "computedHash": "949c2af5ac2e3b53f598924eb3c8e28e17f72062d03de6fcdac47feb97c79d9b"
+    },
+    "chrome-extension-development": {
+      "source": "mindrally/skills",
+      "sourceType": "github",
+      "skillPath": "chrome-extension-development/SKILL.md",
+      "computedHash": "0de6cab64ca8aa87aeb89905a0b08cd5a081c68823894c6e85ae6df14a763b03"
+    },
+    "create-agent": {
+      "source": "openrouterteam/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/create-agent/SKILL.md",
+      "computedHash": "7232cfa7d012008bf12fa33815af49db10e7ddd5549c75c501168875a5334e11"
+    }
+  }
+}

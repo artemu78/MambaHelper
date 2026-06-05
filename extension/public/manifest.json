@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "MambaHelper",
+  "version": "0.1.0",
+  "description": "Disclose visitors and analyze chats on Mamba.ru",
+  "permissions": [
+    "storage",
+    "tabs"
+  ],
+  "host_permissions": [
+    "*://*.mamba.ru/*",
+    "*://*.wamba.com/*"
+  ],
+  "action": {
+    "default_popup": "index.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.mamba.ru/*",
+        "*://*.wamba.com/*"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ],
+  "icons": {
+    "16": "vite.svg",
+    "48": "vite.svg",
+    "128": "vite.svg"
+  }
+}

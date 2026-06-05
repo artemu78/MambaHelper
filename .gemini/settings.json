@@ -1,0 +1,20 @@
+{
+  "skills": {
+    "disabled": [
+      "hw3-lesson-10-checker-ai-for-devs",
+      "supabase-storage",
+      "hw5-lesson-17-checker-ai-for-devs",
+      "Homework checker, AI-Agents, hw 2, lesson 7",
+      "Homework checker, AI-Agents, hw 3, lesson 11",
+      "Homework checker, AI-Agents, hw 4, lesson 17",
+      "docker-expert",
+      "hw-lesson-2-checker-ai-for-devs",
+      "hw-lesson-6-checker-ai-for-devs",
+      "Homework checker, AI-for-devs, homework 4, lesson 12",
+      "mcp-builder",
+      "playwright-best-practices",
+      "recipe-create-presentation",
+      "remotion-best-practices"
+    ]
+  }
+}

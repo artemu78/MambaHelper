@@ -1,0 +1,18 @@
+node_modules
+venv
+__pycache__
+.DS_Store
+
+# SAM build artifacts
+.aws-sam/
+
+# Python
+*.pyc
+*.pyo
+.venv/
+.env
+.pytest_cache/
+
+# IDE
+.vscode/
+.idea/
